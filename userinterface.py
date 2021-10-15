@@ -60,7 +60,14 @@ def main():
     global win, raw_text, translate_text
     win = tk.Tk()
     win.title("翻译")
-    # win.iconbitmap("/home/amzing/python/translate_paper/trans.ico")
+    # img = PhotoImage(file='/home/amzing/python/translate_paper/123.png')
+    # win.tk.call('wm', 'iconphoto', root._w, img)
+    # win.iconbitmap("@")
+    # win.iconbitmap("@/home/amzing/python/translate_paper/trans.png")
+    # win.wm_iconbitmap('@/home/amzing/python/translate_paper/123.png')
+    win.iconphoto(True, PhotoImage(file='/home/amzing/python/translate_paper/trans.png'))
+    # win.iconbitmap('@/home/amzing/python/translate_paper/1.png')
+
     windows_width = int(win.winfo_screenwidth()/2)
     windows_height = int(win.winfo_screenheight()/2)
     win.resizable(True, True)
