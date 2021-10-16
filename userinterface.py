@@ -22,7 +22,9 @@ def refine_pdf_raw_data(raw_data):
     return raw_data
 
 def add_line_feed(ans):
-    return ans.replace("。", "。\n\n")
+    ans = ans.replace("。", "。\n\n")
+    ans = ans.replace("\n ", "\n")
+    return ans
 
 def Adaptor(fun, **kwds):
     '''事件处理函数的适配器，相当于中介，那个event是从那里来的呢，我也纳闷，这也许就是python的伟大之处吧'''
@@ -65,7 +67,7 @@ def main():
     # win.iconbitmap("@")
     # win.iconbitmap("@/home/amzing/python/translate_paper/trans.png")
     # win.wm_iconbitmap('@/home/amzing/python/translate_paper/123.png')
-    win.iconphoto(True, PhotoImage(file='/home/amzing/python/translate_paper/trans.png'))
+    win.iconphoto(True, PhotoImage(file='d:/python/python_data/translate_paper/trans.png'))
     # win.iconbitmap('@/home/amzing/python/translate_paper/1.png')
 
     windows_width = int(win.winfo_screenwidth()/2)
