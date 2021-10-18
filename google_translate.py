@@ -10,5 +10,7 @@ def google_translate(text):
 
 
 if __name__ == '__main__':
-    ans = google_translate("hello")
+    ans = google_translate("""Since
+both variants can be easily integrated into the presented algorithms,
+we didn’t clutter the pseudocode with these steps.""")
     print(ans)

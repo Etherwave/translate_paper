@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="408e9b3e-ff0b-4bc9-87fe-fa477359e0ec" name="Default Changelist" comment="">
+    <list default="true" id="fc5eb94c-5155-45e4-a943-a8c31adbf8b8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/google_trans_new.py" beforeDir="false" afterPath="$PROJECT_DIR$/google_trans_new.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/google_translate.py" beforeDir="false" afterPath="$PROJECT_DIR$/google_translate.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/userinterface.py" beforeDir="false" afterPath="$PROJECT_DIR$/userinterface.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -13,17 +14,10 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1YuiqE6g3WO8mBemrAeNi9L3Hqn" />
+  <component name="ProjectId" id="1zZLGPh3RxapQUXPw90mKgyf3t0" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -33,17 +27,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../google_trans_new" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager" selected="Python.userinterface">
-    <configuration name="change_txt" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="BaiduTranslate" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="translate_paper" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -56,7 +46,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/change_txt.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BaiduTranslate.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -65,18 +55,40 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="google_translate" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="google_trans_new" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="translate_paper" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="/usr/bin/python" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/google_trans_new.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="google_translate" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="translate_paper" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/google_translate.py" />
       <option name="PARAMETERS" value="" />
@@ -87,7 +99,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="userinterface" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="translate_paper" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -99,28 +111,6 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="userinterface" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="/usr/bin/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/userinterface.py" />
       <option name="PARAMETERS" value="" />
@@ -131,145 +121,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="youdao_translate" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="translate_paper" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/youdao_translate.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="Python.change_txt" />
-      <item itemvalue="Python.google_translate" />
-      <item itemvalue="Python.main" />
-      <item itemvalue="Python.userinterface" />
-      <item itemvalue="Python.youdao_translate" />
-    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.userinterface" />
+        <item itemvalue="Python.BaiduTranslate" />
+        <item itemvalue="Python.google_trans_new" />
         <item itemvalue="Python.google_translate" />
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.youdao_translate" />
-        <item itemvalue="Python.change_txt" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="408e9b3e-ff0b-4bc9-87fe-fa477359e0ec" name="Default Changelist" comment="" />
-      <created>1581592331667</created>
+      <changelist id="fc5eb94c-5155-45e4-a943-a8c31adbf8b8" name="Default Changelist" comment="" />
+      <created>1634350568504</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1581592331667</updated>
-      <workItem from="1581592333238" duration="4202000" />
-      <workItem from="1581943566961" duration="772000" />
-      <workItem from="1583474066917" duration="1694000" />
-      <workItem from="1583799070472" duration="731000" />
-      <workItem from="1583804941646" duration="723000" />
-      <workItem from="1583806209532" duration="4803000" />
-      <workItem from="1584433379605" duration="1625000" />
-      <workItem from="1584547456514" duration="99000" />
-      <workItem from="1584547840255" duration="2911000" />
-      <workItem from="1584605076809" duration="1227000" />
-      <workItem from="1584630436134" duration="607000" />
-      <workItem from="1584668254462" duration="605000" />
-      <workItem from="1584801589069" duration="2647000" />
-      <workItem from="1584840950783" duration="842000" />
-      <workItem from="1596590574784" duration="8084000" />
-      <workItem from="1596674589474" duration="1271000" />
-      <workItem from="1596855676632" duration="1345000" />
-      <workItem from="1597830851053" duration="2099000" />
-      <workItem from="1597887661036" duration="1383000" />
-      <workItem from="1597910333385" duration="614000" />
-      <workItem from="1597973780081" duration="6595000" />
-      <workItem from="1598012664398" duration="1089000" />
-      <workItem from="1598020102141" duration="8000" />
-      <workItem from="1598406731791" duration="695000" />
-      <workItem from="1598493048216" duration="3023000" />
-      <workItem from="1600128579836" duration="321000" />
-      <workItem from="1601515638088" duration="3739000" />
-      <workItem from="1602251196375" duration="1848000" />
-      <workItem from="1602380598452" duration="2633000" />
-      <workItem from="1602395994802" duration="1120000" />
-      <workItem from="1602426156334" duration="1195000" />
-      <workItem from="1602458115631" duration="634000" />
-      <workItem from="1602477528302" duration="49000" />
-      <workItem from="1602933537487" duration="5932000" />
-      <workItem from="1602979467441" duration="9560000" />
-      <workItem from="1603023779826" duration="1041000" />
-      <workItem from="1603028098889" duration="604000" />
-      <workItem from="1603064287950" duration="605000" />
-      <workItem from="1603085427709" duration="11000" />
-      <workItem from="1603154352852" duration="2956000" />
-      <workItem from="1603241116791" duration="10845000" />
-      <workItem from="1603326055220" duration="1431000" />
-      <workItem from="1603335402940" duration="4254000" />
-      <workItem from="1603430480335" duration="339000" />
-      <workItem from="1603518259072" duration="1000" />
-      <workItem from="1603518264929" duration="3995000" />
-      <workItem from="1603587971692" duration="612000" />
-      <workItem from="1603623779273" duration="666000" />
-      <workItem from="1603763025439" duration="393000" />
-      <workItem from="1603779271882" duration="2614000" />
-      <workItem from="1603846201570" duration="712000" />
-      <workItem from="1604283739867" duration="1029000" />
-      <workItem from="1604386663993" duration="2241000" />
-      <workItem from="1604459169085" duration="3533000" />
-      <workItem from="1604537852726" duration="752000" />
-      <workItem from="1604551761618" duration="111000" />
-      <workItem from="1604578840488" duration="7171000" />
-      <workItem from="1604645543179" duration="4609000" />
-      <workItem from="1604749786490" duration="3728000" />
-      <workItem from="1604794855310" duration="104000" />
-      <workItem from="1605059685026" duration="1407000" />
-      <workItem from="1605164111901" duration="13839000" />
-      <workItem from="1605314943091" duration="1649000" />
-      <workItem from="1605328026764" duration="88000" />
-      <workItem from="1605331477537" duration="14000" />
-      <workItem from="1605332086366" duration="20000" />
-      <workItem from="1605335908959" duration="51000" />
-      <workItem from="1607306968034" duration="273000" />
-      <workItem from="1607477105019" duration="50000" />
-      <workItem from="1607669684361" duration="619000" />
-      <workItem from="1615950535102" duration="6000" />
-      <workItem from="1616839396611" duration="468000" />
-      <workItem from="1616847950660" duration="250000" />
-      <workItem from="1616856641660" duration="658000" />
-      <workItem from="1616987542357" duration="603000" />
-      <workItem from="1617007234739" duration="3634000" />
-      <workItem from="1619147262035" duration="34000" />
-      <workItem from="1622723594172" duration="230000" />
-      <workItem from="1622780227968" duration="80000" />
-      <workItem from="1626692692793" duration="1101000" />
-      <workItem from="1626841532671" duration="8000" />
-      <workItem from="1632470689368" duration="813000" />
-      <workItem from="1634212949878" duration="2088000" />
-      <workItem from="1634264083810" duration="3629000" />
-      <workItem from="1634283373694" duration="185000" />
-      <workItem from="1634283563022" duration="386000" />
-      <workItem from="1634285766698" duration="250000" />
-      <workItem from="1634286024633" duration="3573000" />
-      <workItem from="1634349751539" duration="237000" />
+      <updated>1634350568504</updated>
+      <workItem from="1634350571216" duration="973000" />
+      <workItem from="1634369305636" duration="6888000" />
+      <workItem from="1634445782302" duration="2365000" />
+      <workItem from="1634463473239" duration="2574000" />
+      <workItem from="1634522503803" duration="269000" />
     </task>
     <servers />
   </component>
@@ -277,10 +150,9 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/translate_paper$main.coverage" NAME="main Coverage Results" MODIFIED="1607307082421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/translate_paper$youdao_translate.coverage" NAME="youdao_translate Coverage Results" MODIFIED="1602983745601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/translate_paper$change_txt.coverage" NAME="change_txt Coverage Results" MODIFIED="1596682001042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/translate_paper$userinterface.coverage" NAME="userinterface Coverage Results" MODIFIED="1634291107646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/translate_paper$google_translate.coverage" NAME="google_translate Coverage Results" MODIFIED="1634285869532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/translate_paper$userinterface.coverage" NAME="userinterface Coverage Results" MODIFIED="1634522718360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/translate_paper$BaiduTranslate.coverage" NAME="BaiduTranslate Coverage Results" MODIFIED="1634522709754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/translate_paper$google_translate.coverage" NAME="google_translate Coverage Results" MODIFIED="1634350841452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/translate_paper$google_trans_new.coverage" NAME="google_trans_new Coverage Results" MODIFIED="1634452470505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

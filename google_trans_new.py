@@ -16,6 +16,17 @@ URLS_SUFFIX = [re.search('translate.google.(.*)', url.strip()).group(1) for url 
 URL_SUFFIX_DEFAULT = 'cn'
 
 
+headers = {
+    "Referer": "https://translate.google.cn/",
+    "User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/93.0',
+    "Accept-Language": "zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2",
+    "Content-Type": "application/x-www-form-urlencoded;charset=utf-8",
+    "Origin": "https://translate.google.cn",
+    "Connection": "close",
+    "X-Same-Domain": "1",
+    "X-Goog-BatchExecute-Bgr": "[\";gpy4nNHQAAYjKaoDIylf7BBZqYb4OtYmACkAIwj8RqVE6iZklU4oHZZSOOQrKiEM0LAQLxmMCUJIenl-tJxc286fah8AAABTTwAAAB51AQcXAGdmC4AEd-xL7Czop-ohtTTa4UUs4QslH2Li7pe7MTB6C3otIopZ0qL3VjERdayByKLbNNpalHN-5YtBmHAoGbgbAtNjZA7Y-tBeJn9tPwKApUGDaa21BMSxKdENNdGiBA97NewLtDLChAIhyWnHci4wD_wBoEaf000EmXoujikHC-KZKQI07AVy2N6i6AV54So6-HiNUUFwPEYlGiv-DnLWMbdLyoGLUOHLzrb7RrG5d_o3aiKajhGEa-0XtkKohCa0nIFNu8G9s2VL-o1L6O9i35LvZs8cHpDOkQgqHbxkQupYdHzfiFxkCrz11CO_bR4ldHzJ3zvUYdi62OGt6lX62dhJFh28pIJGDImZQmzJYADG95Low8mTPth6kcunNiXxyaQU2Q_IsqRb-zjdwwSplvsHai5OOFGJ7XV6Hkj9Kkyjy5bfmX5K48nFUqno6S-47opZvjGJS3F7I8IEoIsxZx6UiYB7BgvExvIKmChYUx8mEQGNARZ2AqyASxfihR5g7qGxyea-1eUS_fJpoiCEGb1jEaKEeVn8oV-X0xDyK_zuRm3zl1M4_r14AjC6-SXo-xHczKnfIxH2KUqiDrfOvezhpPfsObf6qNzJOFbQuXVR_I_e5GpS4pVYbMYDbDW3iDML0XA-DXJiYB56cu9m17g7NmJhXpM-lU1VLYwAyir6ky3wMEQ2k4Nyf3Bk4jlNV1qqA3-BbSEGt5GDepJurL7uyYJ85pTR84isFzoT8iazqIRNXa25acIwJ82v1_oVepiBs8PcctOnUhwwVe64YqEIEcg_cSj39p1Amoma9NsTuDui7rdkxeHvQH0GSfa-aUz0DP7eFAyr9T727oiUBoSarE3KQE44y6M\",null,null,44,null,null,null,0,\"2\"]"
+}
+
 class google_new_transError(Exception):
     """Exception that uses context to present a meaningful error message"""
 
@@ -98,39 +109,56 @@ class google_translator:
         self.timeout = timeout
 
     def _package_rpc(self, text, lang_src='auto', lang_tgt='auto'):
+        ##https://translate.google.cn/_/TranslateWebserverUi/data/batchexecute?rpcids=QShL0&f.sid=3167531912345882768&bl=boq_translate-webserver_20211013.12_p0&hl=zh-CN&soc-app=1&soc-platform=1&soc-device=1&_reqid=737790&rt=c
         GOOGLE_TTS_RPC = ["MkEWBc"]
-        parameter = [[text.strip(), lang_src, lang_tgt, True], [1]]
+        parameter = [[text.strip(), "auto", "zh-CN", True], [None]]
+        # print(parameter)
+        # [['we didn’t clutter the pseudocode with these steps.', 'en', 'zh-CN', True], [None]]
         escaped_parameter = json.dumps(parameter, separators=(',', ':'))
+        # print(escaped_parameter)
+        # [["we didn\u2019t clutter the pseudocode with these steps.","en","zh-CN",true],[null]]
         rpc = [[[random.choice(GOOGLE_TTS_RPC), escaped_parameter, None, "generic"]]]
+        # print(rpc)
+        #f.req: [[["AVdN8","[\"h\",\"en\",\"zh-CN\"]",null,"generic"]]]
+
         espaced_rpc = json.dumps(rpc, separators=(',', ':'))
         # text_urldecode = quote(text.strip())
+        # print(espaced_rpc)
+        # [[["MkEWBc","[[\"h\",\"en\",\"zh-CN\",true],[null]]",null,"generic"]]]
+        # should be [[["MkEWBc","[[\"g\",\"auto\",\"zh-CN\",true],[null]]",null,"generic"]]]&
+        # [[["MkEWBc","[[\"we didn't clutter the pseudocode with these steps.\",\"auto\",\"zh-CN\",true],[null]]",null,"generic"]]]
+        # [[["MkEWBc","[[\"we didn’t clutter the pseudocode with these steps.\",\"auto\",\"zh-CN\",true],[null]]",null,"generic"]]]&
         freq_initial = "f.req={}&".format(quote(espaced_rpc))
+        # print(freq_initial)
         freq = freq_initial
         return freq
 
     def translate(self, text, lang_tgt='auto', lang_src='auto', pronounce=False):
         try:
-            lang = LANGUAGES[lang_src]
+            lang_src = LANGUAGES[lang_src]
         except:
             lang_src = 'auto'
         try:
-            lang = LANGUAGES[lang_tgt]
+            lang_tgt = LANGUAGES[lang_tgt]
         except:
-            lang_src = 'auto'
+            lang_tgt = 'auto'
         text = str(text)
         if len(text) >= 5000:
             return "Warning: Can only detect less than 5000 characters"
         if len(text) == 0:
             return ""
-        headers = {
-            "Referer": "http://translate.google.{}/".format(self.url_suffix),
-            "User-Agent":
-                "Mozilla/5.0 (Windows NT 10.0; WOW64) "
-                "AppleWebKit/537.36 (KHTML, like Gecko) "
-                "Chrome/47.0.2526.106 Safari/537.36",
-            "Content-Type": "application/x-www-form-urlencoded;charset=utf-8"
-        }
+        # headers = {
+        #     "Referer": "http://translate.google.{}/".format(self.url_suffix),
+        #     "User-Agent": 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.5.6',
+        #     "Content-Type": "application/x-www-form-urlencoded;charset=utf-8"
+        # }
         freq = self._package_rpc(text, lang_src, lang_tgt)
+        # print(self.url)
+        # print(freq)
+        #f.req=%5B%5B%5B%22MkEWBc%22%2C%22%5B%5B%5C%22we%20didn%5C%5Cu2019t%20clutter%20the%20pseudocode%20with%20these%20steps.%5C%22%2C%5C%22english%5C%22%2C%5C%22chinese%20%28simplified%29%5C%22%2Ctrue%5D%2C%5B1%5D%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+        #https://translate.google.cn/_/TranslateWebserverUi/data/batchexecute?rpcids=QShL0&f.sid=3167531912345882768&bl=boq_translate-webserver_20211013.12_p0&hl=zh-CN&soc-app=1&soc-platform=1&soc-device=1&_reqid=737790&rt=c
+        #https://translate.google.cn/_/TranslateWebserverUi/data/batchexecute?rpcids
+        #https://translate.google.cn/_/TranslateWebserverUi/data/batchexecute
         response = requests.Request(method='POST',
                                     url=self.url,
                                     data=freq,
@@ -144,6 +172,7 @@ class google_translator:
                 r = s.send(request=response.prepare(),
                            verify=False,
                            timeout=self.timeout)
+
             for line in r.iter_lines(chunk_size=1024):
                 decoded_line = line.decode('utf-8')
                 if "MkEWBc" in decoded_line:
@@ -203,11 +232,8 @@ class google_translator:
         if len(text) == 0:
             return ""
         headers = {
-            "Referer": "http://translate.google.{}/".format(self.url_suffix),
-            "User-Agent":
-                "Mozilla/5.0 (Windows NT 10.0; WOW64) "
-                "AppleWebKit/537.36 (KHTML, like Gecko) "
-                "Chrome/47.0.2526.106 Safari/537.36",
+            "Referer": "https://translate.google.{}/".format(self.url_suffix),
+            "User-Agent": 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.5.6',
             "Content-Type": "application/x-www-form-urlencoded;charset=utf-8"
         }
         freq = self._package_rpc(text)
@@ -249,3 +275,10 @@ class google_translator:
             # Request failed
             log.debug(str(e))
             raise google_new_transError(tts=self)
+
+
+if __name__ == '__main__':
+    ans = google_translator().translate("pseudocode", lang_src="en", lang_tgt='zh-cn')
+    ans = google_translator().translate("we didn't clutter the pseudocode with these steps.", lang_tgt="zh-CN")
+    # ans = google_translator().translate("h", lang_src="en", lang_tgt='zh-cn')
+    print(ans)

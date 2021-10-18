@@ -1,7 +1,8 @@
 import tkinter as tk
 from tkinter import *
-from google_translate import google_translate
+# from google_translate import google_translate
 from youdao_translate import youdao_translate
+from BaiduTranslate import baidu_translate
 
 global_refine_raw_data = ""
 traslate_data = ""
@@ -19,6 +20,7 @@ def refine_pdf_raw_data(raw_data):
         return raw_data
     raw_data = raw_data.replace("-\n", " ")
     raw_data = raw_data.replace("\n", " ")
+    raw_data = raw_data.replace("‘", "'")
     return raw_data
 
 def add_line_feed(ans):
@@ -49,8 +51,9 @@ def refrash_translation():
     # 如果数据与原来的不一样，那就翻译
     if refine_raw_data!=global_refine_raw_data or traslate_data=="something is wrong!":
         global_refine_raw_data = refine_raw_data
-        traslate_data = google_translate(refine_raw_data)
+        # traslate_data = google_translate(refine_raw_data)
         # traslate_data = youdao_translate(refine_raw_data)
+        traslate_data = baidu_translate(refine_raw_data)
         traslate_data = add_line_feed(traslate_data)
         # 先清空结果栏
         translate_text.delete(0.0, END)
