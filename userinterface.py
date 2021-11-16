@@ -3,6 +3,7 @@ from tkinter import *
 # from google_translate import google_translate
 from youdao_translate import youdao_translate
 from BaiduTranslate import baidu_translate
+from deepl_trans import deepl_trans
 
 global_refine_raw_data = ""
 traslate_data = ""
@@ -53,7 +54,8 @@ def refrash_translation():
         global_refine_raw_data = refine_raw_data
         # traslate_data = google_translate(refine_raw_data)
         # traslate_data = youdao_translate(refine_raw_data)
-        traslate_data = baidu_translate(refine_raw_data)
+        # traslate_data = baidu_translate(refine_raw_data)
+        traslate_data = deepl_trans(refine_raw_data)
         traslate_data = add_line_feed(traslate_data)
         # 先清空结果栏
         translate_text.delete(0.0, END)
